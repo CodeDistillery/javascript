@@ -613,21 +613,24 @@
 
 ## Blocks
 
-  - Use braces with all multi-line blocks.
+  - Use braces with all blocks.
 
     ```javascript
     // bad
     if (test)
       return false;
-
-    // good
+      
+    // bad
     if (test) return false;
 
     // good
     if (test) {
       return false;
     }
-
+    ```
+  - Avoid one line blocks
+  
+    ```javascript
     // bad
     function() { return false; }
 
@@ -635,8 +638,15 @@
     function() {
       return false;
     }
-    ```
+    
+    // bad
+    if (test) { return false; }
 
+    // good
+    if (test) {
+      return false;
+    }
+    ```
   - If you're using multi-line blocks with `if` and `else`, put `else` on the same line as your
     `if` block's closing brace.
 
